@@ -1,0 +1,21 @@
+[main]
+api_key = XYZ
+api_debug = off
+debug = off
+
+[devsupport-infra]
+hostname = devsupport-infra.easycompany.com
+plan_id = 1
+image_id = 78
+location_id = 7
+script_deployment = bootstrap.sh
+ssh_key_deployment = ~/.ssh/id_rsa.pub
+
+
+[retailapp-infra]
+hostname = retailapp-infra.easycompany.com
+plan_id = 1
+image_id = 78
+location_id = 7
+script_deployment = bootstrap.sh
+ssh_key_deployment = ~/.ssh/id_rsa.pub

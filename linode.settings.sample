@@ -1,0 +1,28 @@
+#
+# Note: use `./linode configtest' to validate the configuration file.
+#
+
+# MAIN SECTION
+[main]
+# LINODE API KEY
+api_key = ABCXYZ
+# DEBUG OUTPUT
+debug = true
+api_debug = true
+# END OF MAIN SECTION
+
+# NODE SECTION
+[abc.xyz]
+# Hostname of your Linode instance.
+hostname = abc.xyz
+# What type of vps plan to use? [Eg: 1 for Linode 1024]; run `./linode listplans' to list all the plans with id.
+plan_id = 1 			
+# Which OS image to use? [Eg: 78 for Debian Squeeze 64bit]; run `./linode listimages' to list all the images with id. 
+image_id = 1				
+# Where to deploy this node? [Eg: 8 for Tokyo, JP]; run `./linode listlocations' to list all the location with id.
+location_id = 1 	
+# This script will be used to bootstrap the node [Eg: Installing puppet client and configure to pull/apply manifests from puppet master.]
+script_deployment = bootstrap.sh 
+# This ssh public will be copied to /root/.ssh/authorized_key; only machine having this public key can access the node or reset using Linode manager (http://linode.com).
+ssh_key_deployment = ~/.ssh/id_rsa.pub 
+# END OF NODE SECTION
